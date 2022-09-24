@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +10,10 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'bat';
-  constructor(private router: Router){}
+  
+  constructor(private router: Router){
+    
+  }
   goToIndex() {
     this.setActive('index');
     this.router.navigate(['/', 'index']);
